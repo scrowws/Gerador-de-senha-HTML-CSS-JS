@@ -1,0 +1,118 @@
+*{
+    /*Width e heigth serve para definir a área da janela que será utilizada*/
+    /*margin serve para definir a margen*/
+    /*box-sizing é utilizada para alterar a propriedade padrão da box model, usada para calcular larguras (widths) e alturas (heights) dos elementos.*/
+    font-family: sans-serif;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+body{
+    /*Display Flex é um tipo de organização dos elementos
+    No qual foi adicionado flex-direction para definir o 
+    da organização*/
+    background-color: #2c2c2c;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+/*Aqui .logo esta chamando a class do html*/
+/*magin bottom serve para dar distancia dos elemntos abaixo*/
+.logo{
+    max-width: 600px;
+    margin-bottom: 24px;
+}
+
+.container-input{
+    max-width: 480px;
+    margin: 14px 0;
+}
+
+.container-input span{
+    color: #ffffff;
+    font-size: 22px;
+}
+
+.slider{
+    /*Webkit server para definir alguns kits de aparencia
+    nome é utilizado para retirar o kit atual*/
+    -webkit-appearance: none;
+    width: 100%;
+    border-radius: 5px;
+    height: 20px;
+    outline: none;
+    margin-top: 8px;
+}
+
+.button-cta{
+    height: 40px;
+    background-color: #00880b;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 40px;
+    color: #ffffff;
+    font-size: 20px;
+    /*cursos serve para definir qual ação o ponteiro do mouse
+    tera ao passar por cima, por exemplo, assumir o formato
+    de apontar, formato de escrita, entre outros*/
+}
+
+.container-password{
+    max-width: 480px;
+    margin: 14px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title{
+    color: #ffffff;
+    text-align: center;
+    font-size: 28px;
+    margin-top: 24px;
+    margin-bottom: 8px;
+}
+
+.password{
+    color: #ffffff;
+    height: 60px;
+    background-color: hsla(0, 0%, 0%, 0.4);
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #3f3f3f;
+    transition: transform 0.5s;
+}
+
+.password:hover{
+    transform: scale(1.05);
+}
+
+.tooltip{
+    color: #ffffff;
+    position: relative;
+    top: 20px;
+    padding: 6px 8px;
+    background: hsla(0, 0%, 0%, 0.4);
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.hide{
+    display: none;
+}
+
+.container-password:hover .tooltip{
+    visibility: visible;
+    bottom: 50px;
+    opacity: 1;
+}
